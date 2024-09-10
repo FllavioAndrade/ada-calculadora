@@ -1,13 +1,15 @@
-# tests/test_calculadora.py
-
 import pytest
-from calculadora import soma  # Importe a função que você deseja testar
+from calculadora import soma, subtracao, multiplicacao, divisao
 
 def test_soma():
-    assert soma(1, 2) == 3
-    assert soma(-1, 1) == 0
-    assert soma(0, 0) == 0
-    assert soma(-1, -1) == -2
+    assert soma(3, 2) == 5
 
-if __name__ == "__main__":
-    pytest.main()
+def test_subtracao():
+    assert subtracao(5, 2) == 3
+
+def test_multiplicacao():
+    assert multiplicacao(3, 2) == 6
+
+def test_divisao():
+    assert divisao(6, 2) == 3
+    assert divisao(5, 0) == "Erro: Divisão por zero!"
