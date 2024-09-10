@@ -7,7 +7,9 @@ def soma(num1, num2):
 
 def subtracao(num1, num2):
     return num1 - num2
-    
+
+def multiplicacao(num1, num2):
+    return num1 * num2    
 
 @app.route('/', methods=['GET', 'POST'])
 def calculadora():
@@ -48,7 +50,7 @@ def calculadora():
                             <select id="operacao" name="operacao">
                                 <option value="soma">Soma</option>
                                 <option value="subtracao">Subtração</option>
-
+                                <option value="multiplicacao">Multiplicação</option>
                             </select><br><br>
                             <input type="submit" value="Calcular">
                         </form>
@@ -70,6 +72,7 @@ def calculadora():
                         <select id="operacao" name="operacao">
                             <option value="soma">Soma</option>
                             <option value="subtracao">Subtração</option>
+                            <option value="multiplicacao">Multiplicação</option>
                         </select><br><br>
                         <input type="submit" value="Calcular">
                     </form>
