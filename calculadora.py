@@ -5,6 +5,8 @@ app = Flask(__name__)
 def soma(num1, num2):
     return num1 + num2
 
+def subtracao(num1, num2):
+    return num1 - num2
     
 
 @app.route('/', methods=['GET', 'POST'])
@@ -20,6 +22,8 @@ def calculadora():
 
             if operacao == 'soma':
                 resultado = soma(num1, num2)
+            elif operacao == 'subtracao':
+                resultado = subtracao(num1, num2)
             
 
             return render_template_string('''
@@ -43,6 +47,8 @@ def calculadora():
                             <label for="operacao">Operação:</label>
                             <select id="operacao" name="operacao">
                                 <option value="soma">Soma</option>
+                                <option value="subtracao">Subtração</option>
+
                             </select><br><br>
                             <input type="submit" value="Calcular">
                         </form>
@@ -63,6 +69,7 @@ def calculadora():
                         <label for="operacao">Operação:</label>
                         <select id="operacao" name="operacao">
                             <option value="soma">Soma</option>
+                            <option value="subtracao">Subtração</option>
                         </select><br><br>
                         <input type="submit" value="Calcular">
                     </form>
