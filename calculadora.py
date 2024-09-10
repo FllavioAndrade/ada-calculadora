@@ -9,7 +9,11 @@ def subtracao(num1, num2):
     return num1 - num2
 
 def multiplicacao(num1, num2):
-    return num1 * num2    
+    return num1 * num2   
+
+def divisao(num1, num2):
+    return num1 / num2
+
 
 @app.route('/', methods=['GET', 'POST'])
 def calculadora():
@@ -51,6 +55,7 @@ def calculadora():
                                 <option value="soma">Soma</option>
                                 <option value="subtracao">Subtração</option>
                                 <option value="multiplicacao">Multiplicação</option>
+                                <option value="divisao">Divisão</option>
                             </select><br><br>
                             <input type="submit" value="Calcular">
                         </form>
@@ -73,6 +78,7 @@ def calculadora():
                             <option value="soma">Soma</option>
                             <option value="subtracao">Subtração</option>
                             <option value="multiplicacao">Multiplicação</option>
+                            <option value="divisao">Divisão</option>
                         </select><br><br>
                         <input type="submit" value="Calcular">
                     </form>
