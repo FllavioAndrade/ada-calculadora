@@ -4,6 +4,9 @@ on:
   pull_request:
     branches:
       - feature/soma
+      - feature/subtracao
+      - feature/divisao
+      - feature/multiplicacao
   push:
     branches:
       - develop
